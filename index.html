@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rgistration</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		body{
+		    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url("imges/food.jpg"); 
+              background-attachment: fixed;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              height: 100%;
+              display: table;
+		}
+		form{
+			margin-left: 66%;
+			position: absolute;
+			z-index: 3;
+		    }
+		input[type=text] , input[type=email] , input[type=password]{ 
+	       width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border-bottom: 1px solid #ccc;
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+            border-radius: 4px;
+        }
+        textarea{
+        	  width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border-radius: 4px;
+        }
+
+        input[type=submit]:focus,input[type=email]:focus,input[type=password]:focus{
+        	 background-color: #ddd;
+             outline: none;
+        }
+        input[type=button]{
+             background-color: #4CAF50;
+             color: white;
+             padding: 16px 20px;
+             border: none;
+             cursor: pointer;
+             width: 100%;
+             opacity: 0.9;
+            }
+
+           input[type=button]:hover {
+             opacity: 1;
+             }
+             .damn{
+             	position: fixed;
+             	top: 35%;
+             	left: 35%;
+             	font-family: 'Rochester', cursive;
+	            color: #fff;
+	            font-size: 80px;
+	            font-weight: 400;
+             }
+             .res{
+             	position: absolute;
+             	color: #fff;
+	            font-size: 24px;
+	            font-weight: 400;
+	            margin-top: 700px;
+             }
+             li{
+             	color: white;
+             	font-size: 24px;
+             }
+             .navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    flex-wrap: wrap;
+    z-index: 6;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+    font-family: sans-serif;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li a:hover {
+   color: red;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;s
+    }
+    .last{
+     margin: 150px auto;
+     width:  100%;
+     flex-wrap: wrap;
+    }
+    .text{
+     text-align: justify;
+     margin: 20px;
+    }
+    a:hover{
+     color: red;
+    }
+	</style>
+</head>
+<body>
+<nav class="navbar">
+     <div class="brand-title" style="font-family: sans-serif; color: red;">GUSTO RESTURANT</div>
+      <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+     <li><a href="index.html" style="color: red;">REGISTER</a></li>         
+     <li><a href="page 2.html">HOME</a></li>
+     <li><a href="page 3.html">MENU</a></li>
+     <li><a href="page 4.html">CHEFF</a></li>
+     <li><a href="page 5.html">CONTACT</a></li>
+</ul>
+</div>
+</nav>
+<script type="text/javascript">
+     const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+</script>
+	<h1 class="damn">Gusto</h1>
+	<p class="res">Reservations: (887) 654-3210</p>
+<form action="index.html" method="post" style="margin-top: 40px;">
+<h1 style="text-align: center; color: white;">Register now!</h1>
+<input type="text" name="first name" placeholder="First name..." required>
+<br>
+<input type="text" name="last name" placeholder="Last name..." required>
+<br>
+<input type="email" id="email" placeholder="Email">
+<input type="password" id="pass" placeholder="Password..." maxlength="8" required>
+<span style="font-family:sans-serif;" id="mnm"></span>
+<br>
+<textarea name="message" rows="19" cols="32">message</textarea>
+<br>
+<input type="button" value="Login" onclick="chpass()">
+</form>
+<script type="text/javascript">
+     chpass = function (validate) {
+          var atr = document.getElementById('pass').value;
+          if(atr.length <8 ){
+               document.getElementById("mnm").innerHTML = "password length must be 8 characters";
+               document.getElementById("mnm").style.color="Red";
+               return("too_short");
+          } else if(atr.search(/[0-9]/)==-1){
+               document.getElementById("mnm").innerHTML = "password must iclude one digit at least";
+               document.getElementById("mnm").style.color="Red";
+               return("no_number");
+          } else if(atr.search(/[""]/)==1){
+               document.getElementById("mnm").innerHTML = "white space not allowed";
+               document.getElementById("mnm").style.color="Red";
+               return("white_space");
+          } else if(atr.search(/[A-Z]/)==-1){
+               document.getElementById("mnm").innerHTML = "password must iclude one upper letter at least";
+               document.getElementById("mnm").style.color="Red";
+               return("no_upper");
+          } else if(atr.search(/[!\@\#\$\%\^\&\*\(\)\_\+\.\,\:\;]/)==-1){
+               document.getElementById("mnm").innerHTML = "password must iclude one special  character at least";
+               document.getElementById("mnm").style.color="Red";
+               return("no_special");
+          }
+            document.getElementById("mnm").innerHTML = "Successful !";
+               document.getElementById("mnm").style.color="White";
+               return("ok");
+     }
+</script>
+</body>
+</html>
